@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Development Exercise</title>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="content-slider">
+      <div class="slider-container">
+        <div class="content-left">
+          <div class="slider-nav-arrows">
+            <button class="slider-arrow" id="btnPrev">
+              <svg
+                class="w-[32px] h-[32px]"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path d="M5 12h14M5 12l4-4m-4 4 4 4" />
+              </svg>
+            </button>
+            <button class="slider-arrow" id="btnNext">
+              <svg
+                class="w-[32px] h-[32px]"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path d="M19 12H5m14 0-4 4m4-4-4-4" />
+              </svg>
+            </button>
+          </div>
+          <h1 class="section-title">The Roberts Family's Story</h1>
+          <p>
+            The circumstances that might lead to homelessness can include loss
+            of income or transportation, a falling out with loved ones, or an
+            abrupt economic downturn. For Brandon and Jennifer, it was all of
+            these things.
+          </p>
+          <button class="arrow-button">
+            More Client Stories<span class="arrow"></span>
+          </button>
+        </div>
+        <div class="content-right">
+          <section class="splide" id="video-slider" aria-label="">
+            <div class="splide__track image-track">
+              <ul class="splide__list">
+                <li class="splide__slide slider-item">
+                  <img src="Branden-Jennifer.png" alt="" />
+                </li>
+                <li class="splide__slide slider-item">
+                  <img src="maxresdefault.png" alt="" />
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

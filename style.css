@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Roboto", serif;
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(241, 92, 34, 1) 0%,
+    rgba(247, 147, 29, 1) 50%,
+    rgba(255, 200, 64, 1) 100%
+  );
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+/* Heading and body font */
+.section-title {
+  font-style: 700;
+  font-size: 46px;
+  line-height: 43px;
+  margin-bottom: 24px;
+}
+
+p {
+  font-style: normal;
+  font-size: 16px;
+  line-height: 23px;
+}
+
+/* Slider navigation buttons */
+.slider-nav-arrows {
+  margin-bottom: 48px;
+}
+
+.slider-arrow {
+  background-color: #262861;
+  border: 1px solid #262861;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.slider-arrow svg {
+  stroke: #fff;
+  stroke-width: 1px;
+}
+
+/* Call to action button */
+.arrow-button {
+  display: flex;
+  color: #262861;
+  background-color: #ffc840;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 16px 32px;
+  border-radius: 34px;
+  border-style: none;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  cursor: pointer;
+  align-items: center;
+  font-size: 14px;
+  margin-top: 48px;
+}
+
+.arrow-button > .arrow {
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid #262861;
+  border-bottom: 2px solid #262861;
+  position: relative;
+  transform: rotate(-45deg);
+  margin: 0 6px;
+  transition: all 0.3s ease;
+}
+
+.arrow-button > .arrow::before {
+  display: block;
+  background-color: currentColor;
+  width: 3px;
+  transform-origin: bottom right;
+  height: 2px;
+  position: absolute;
+  opacity: 0;
+  bottom: calc(-2px / 2);
+  transform: rotate(45deg);
+  transition: all 0.3s ease;
+  content: "";
+  right: 0;
+}
+
+.arrow-button:hover > .arrow {
+  transform: rotate(-45deg) translate(4px, 4px);
+  border-color: text-hover-color;
+}
+
+.arrow-button:hover > .arrow::before {
+  opacity: 1;
+  width: 8px;
+}
+
+.arrow-button:hover {
+  background-color: #ffc840;
+  color: #262861;
+}
+
+/* Slider settings */
+.slider-container {
+  display: grid;
+  grid-template-columns: 30% auto;
+  margin-left: 8rem;
+}
+
+.content-left {
+  min-width: 298px;
+  padding-right: 8rem;
+}
+
+.content-right {
+  cursor: grab;
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.slider-item {
+  position: relative;
+  display: flex;
+  height: 100%;
+}
+
+/* Splide styling */
+.splide__slide img {
+  width: 99%;
+  height: 100%;
+  object-fit: cover;
+  margin-right: 0.8rem;
+  transform: translateX(-10px);
+}
+
+/* Responsive settings */
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+  .slider-container {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-left: 2rem;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 769px) {
+  .slider-container {
+    display: grid;
+    grid-template-columns: 30% auto;
+    margin-left: 3rem;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .slider-container {
+    display: grid;
+    grid-template-columns: 30% auto;
+    margin-left: 4rem;
+  }
+}
+
+@media screen and (min-device-width: 375px) and (max-device-width: 768px) {
+  .content-slider {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    flex-direction: column-reverse;
+  }
+  .content-right {
+    margin-bottom: 2rem;
+  }
+}
